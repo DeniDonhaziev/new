@@ -114,12 +114,10 @@ document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
 document.querySelectorAll('.feature-item, .service-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
         this.style.transform = 'translateY(-10px) scale(1.02)';
-        this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
     });
     
     card.addEventListener('mouseleave', function() {
         this.style.transform = 'translateY(0) scale(1)';
-        this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3)';
     });
 });
 
@@ -188,7 +186,6 @@ function createInteractiveParticles() {
             animation-delay: ${Math.random() * 5}s;
             left: ${Math.random() * 100}%;
             top: ${Math.random() * 100}%;
-            box-shadow: 0 0 ${Math.random() * 10 + 3}px ${color};
             opacity: ${Math.random() * 0.6 + 0.3};
         `;
         hero.appendChild(particle);
@@ -244,12 +241,10 @@ window.addEventListener('load', () => {
 // Add glow effect to gradient text
 document.querySelectorAll('.gradient-text').forEach(element => {
     element.addEventListener('mouseenter', function() {
-        this.style.textShadow = '0 0 30px rgba(102, 126, 234, 0.8), 0 0 60px rgba(240, 147, 251, 0.4)';
         this.style.transform = 'scale(1.05)';
     });
     
     element.addEventListener('mouseleave', function() {
-        this.style.textShadow = 'none';
         this.style.transform = 'scale(1)';
     });
 });
@@ -291,10 +286,8 @@ const buttonPulseStyle = document.createElement('style');
 buttonPulseStyle.textContent = `
     @keyframes buttonPulse {
         0% { 
-            box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
         }
         100% { 
-            box-shadow: 0 0 40px rgba(102, 126, 234, 0.8), 0 0 60px rgba(240, 147, 251, 0.4);
         }
     }
 `;
